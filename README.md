@@ -211,6 +211,14 @@ Representación gráfica de cómo la gramática genera la cadena de entrada:
 
 ### Interfaz Web (Streamlit + ngrok)
 
+1.- Reload grammar para guardar la gramática
+![image](https://github.com/user-attachments/assets/9eee8a94-128a-4bde-ba4a-627f5280a1b5)
+2.- Se puede acceder a las dos tablas respectivamente (parser y recueperación de errores)
+![image](https://github.com/user-attachments/assets/345bbd4e-c793-46e8-ae1b-565a20347814)
+3.- Finalmente podemos analizar la cadena
+![image](https://github.com/user-attachments/assets/189458f7-8427-4626-88e0-96278ad89152)
+
+
 <!-- Reemplaza `path/to/ngrok_screenshot.png` con la ruta real de tu imagen -->
 
 ![Streamlit con ngrok](path/to/ngrok_screenshot.png)
