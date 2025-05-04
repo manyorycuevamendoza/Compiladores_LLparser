@@ -124,27 +124,38 @@ Para que cualquier persona acceda a tu app web:
 ### 1. Expresiones Aritméticas
 
 ```bnf
-E → E + T | E - T | T
-T → T * F | T / F | F
-F → ( E ) | id
+E -> T E'
+E' -> + T E'
+E' -> ε
+T -> F T'
+T' -> * F T'
+T' -> ε
+F -> ( E )
+F -> id
+```
+
+input string 
+
+```bnf
+id + id
 ```
 
 ### 2. Gramática con epsilon
 
 ```bnf
-S → A B
-A → a A | ε
-B → b B | c
+B   -> T B'
+B'  -> or T B' | ε
+T   -> F T'
+T'  -> and F T' | ε
+F   -> not F | ( B ) | id
 ```
 
-### 3. Gramática simple de asignaciones
+input string 
 
 ```bnf
-S → id = E ;
-E → E + T | T
-T → T * F | F
-F → ( E ) | id | num
+not id and ( id or id ) or id
 ```
+
 
 Guarda cualquiera en `grammar.txt` usando `->` o `→` y barras `|` para alternativas.
 
@@ -206,34 +217,30 @@ Representación gráfica de cómo la gramática genera la cadena de entrada:
 ### Interfaz de Escritorio (Tkinter GUI)
 
 <!-- Reemplaza `path/to/gui_screenshot.png` con la ruta real de tu imagen -->
-1.- Colocamos una gramática en el grammar input, para luego guardarla con el boton save grammar, podemos observar las tablas de FIRST y FOLLOW al momento de aplastar el boton de Load Grammar
+1.- Colocamos una gramática en el grammar input, para luego guardarla con el boton save grammar, podemos observar las tablas de FIRST y FOLLOW al momento de aplastar el boton de Load Grammar.
 ![image](https://github.com/user-attachments/assets/2939cfab-c3cc-4fbc-bdda-2b3277f6419e)
-2.- Podemos tambien analizar el input string  colocando la cadena donde se verificara que si es valido o no. Algo interesante de esta interfaz es el boton step quien te enseñara en tiempo real como se va creando los match hasta terminar de recorrer la cadena buscando su regla. 
+2.- Podemos tambien analizar el input string  colocando la cadena donde se verificara que si es válido o no. Algo interesante de esta interfaz es el boton step quien te enseñara en tiempo real como se va creando los match hasta terminar de recorrer la cadena buscando su regla. 
 ![image](https://github.com/user-attachments/assets/f9d4de21-f8f2-47fc-9118-db42a061a120)
-3.- Tambien podemos observar la tabla de parser 
+3.- Tambien podemos observar la tabla de parser .
 ![image](https://github.com/user-attachments/assets/6d5a735f-4eb7-46ff-84b0-64de86b1f0f6)
-4.- La tabla de recuperacion de errores, donde se muestra los Extrar y Explorar
+4.- La tabla de recuperacion de errores, donde se muestra los Extrar y Explorar.
 ![image](https://github.com/user-attachments/assets/dd5d5ee2-196b-4c8d-839d-2a1fa9f0d58d)
-5.- Y por ultimo se muestra un arbol de derivacion 
-![image](https://github.com/user-attachments/assets/15f6fe07-9aed-4e88-8b85-f5d55d7f51a0)
+5.- Y por último se muestra un arbol de derivación.
+![image](https://github.com/user-attachments/assets/6737f088-7b50-490a-b097-7af02b54dec3)
+
 
 ### Interfaz Web (Streamlit + ngrok)
 0.- al ingresar veremos asi la pagina
+
 ![image](https://github.com/user-attachments/assets/2cfa955e-fa74-4704-9621-acd6687e4f8f)
+
 1.- Reload grammar para guardar la gramática
 ![image](https://github.com/user-attachments/assets/9eee8a94-128a-4bde-ba4a-627f5280a1b5)
+
 2.- Se puede acceder a las dos tablas respectivamente (parser y recueperación de errores)
+
 ![image](https://github.com/user-attachments/assets/345bbd4e-c793-46e8-ae1b-565a20347814)
 3.- Finalmente podemos analizar la cadena
+
 ![image](https://github.com/user-attachments/assets/189458f7-8427-4626-88e0-96278ad89152)
 
-
-<!-- Reemplaza `path/to/ngrok_screenshot.png` con la ruta real de tu imagen -->
-
-![Streamlit con ngrok](path/to/ngrok_screenshot.png)
-
-**URL pública (ejemplo):** [https://0ac8-181-176-90-151.ngrok-free.app/](https://0ac8-181-176-90-151.ngrok-free.app/)
-
-<!-- Reemplaza `path/to/ngrok_screenshot.png` con la ruta real de tu imagen -->
-
-![Streamlit con ngrok](path/to/ngrok_screenshot.png)
