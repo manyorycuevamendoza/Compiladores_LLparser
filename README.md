@@ -196,15 +196,6 @@ Representación gráfica de cómo la gramática genera la cadena de entrada:
 * Las ramas siguen las producciones aplicadas.
 
 ---
-
-## 🎓 Para una nota de 20
-
-* **Probar múltiples gramáticas** incluyendo usos de ε.
-* **Verificar** que no haya conflictos en la tabla (celdas con más de una producción).
-* **Mostrar** FIRST y FOLLOW en la GUI antes de construir la tabla.
-* **Ejecutar** análisis paso a paso y verificar el tree dump.
-* **Documentar** en el README cada paso, ejemplos y conceptos.
-
 ---
 
 > ¡Disfruta explorando la teoría de compiladores con tu LL(1) Parser Analyzer! 🚀
