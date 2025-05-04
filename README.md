@@ -31,16 +31,18 @@ Todo ello accesible desde:
 
 * **Python** 3.8 o superior
 * **Graphviz** (para el layout de árboles)
-* Bibliotecas Python:
+* Bibliotecas Python (definidas en `requirements.txt`):
 
-  ```bash
-  pip install streamlit pandas matplotlib networkx pydot pygraphviz
-  ```
+```bash
+pip install -r requirements.txt
+```
 
-  También se usan paquetes de la librería estándar: `re`, `json`, `tkinter`.
+pip install streamlit pandas matplotlib networkx pydot pygraphviz
+
+````
+También se usan paquetes de la librería estándar: `re`, `json`, `tkinter`.
 
 > **Nota**: En distribuciones Linux, instalar `graphviz` y `python3-tk`:
->
 > ```bash
 > sudo apt update
 > sudo apt install graphviz python3-tk
@@ -57,7 +59,7 @@ Todo ello accesible desde:
 ├── grammar.txt            # Gramática de ejemplo (input)
 ├── requirements.txt       # dependencias pip
 └── README.md              # Este documento
-```
+````
 
 ---
 
@@ -196,6 +198,25 @@ Representación gráfica de cómo la gramática genera la cadena de entrada:
 * Las ramas siguen las producciones aplicadas.
 
 ---
+
 ---
 
-> ¡Disfruta explorando la teoría de compiladores con tu LL(1) Parser Analyzer! 🚀
+## 📸 Capturas de Pantalla
+
+### Interfaz de Escritorio (Tkinter GUI)
+
+<!-- Reemplaza `path/to/gui_screenshot.png` con la ruta real de tu imagen -->
+
+![Tkinter GUI](path/to/gui_screenshot.png)
+
+### Interfaz Web (Streamlit + ngrok)
+
+<!-- Reemplaza `path/to/ngrok_screenshot.png` con la ruta real de tu imagen -->
+
+![Streamlit con ngrok](path/to/ngrok_screenshot.png)
+
+**URL pública (ejemplo):** [https://0ac8-181-176-90-151.ngrok-free.app/](https://0ac8-181-176-90-151.ngrok-free.app/)
+
+<!-- Reemplaza `path/to/ngrok_screenshot.png` con la ruta real de tu imagen -->
+
+![Streamlit con ngrok](path/to/ngrok_screenshot.png)
