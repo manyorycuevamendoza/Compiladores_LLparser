@@ -97,7 +97,7 @@ python ll_parser_gui.py
 streamlit run app.py
 ```
 
-* Abre en el navegador `http://localhost:8501` (o el puerto que indique).
+* Abre en el navegador [https://0ac8-181-176-90-151.ngrok-free.app/](https://0ac8-181-176-90-151.ngrok-free.app/) (o el puerto que indique).
 * Alterna entre mostrar la Tabla LL(1) y la Tabla de Recuperación.
 * Analiza cadenas desde la barra lateral.
 
